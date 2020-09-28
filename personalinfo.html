@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style> 
+            .tab { 
+                display: inline-block; 
+                margin-left: 40px; 
+            } 
+           
+           
+            
+        </style> 
+        
+     </head>  
+    
+    <body style="background-color: lightgray;">
+        <form  id="frm" action="https://www.w3schools.com/action_page.php"  autocomplete="on" >
+            
+            <p>
+                <h3 style="text-align:left;">ENTER YOURS PERSONAL INFORMATION</h3> 
+            </p>
+            
+            <label for="First Name">First Name <span class="tab"></span></label><input type="text" name="First Name" id="First Name" required ><br><br>
+            <label for="Last Name">Last Name  <span class="tab"></span></label><input type="text" name="Last Name" id="Last Name" required><br><br>
+            <label for="Roll Number">Roll Number  <span class="tab"></span></label><input type="text" name="Roll Number" id="Roll Number" placeholder="1602-18-733-034"><br><br>
+            
+             <label for="Date of Birth">Date of Birth <span class="tab"></span></label><input type="date"  name="dob" id="Date of Birth" ><br><br>
+            
+             <label for="Gender">Gender</label><br><br>
+             
+            <input type="radio" value="Male" Name="Gender" id="Gender" />Male<br><br>
+            <input type="radio" value="Female" Name="Gender" id="Gender" />Female<br><br>
+            <input type="radio" value="Others" Name="Gender" id="Gender"/>Others<br><br><br>
+            
+            <label for="phone"> phone number:</label>
+            <input type="tel" id="phone" name="phone" ><br><br>
+            <label for="Email"></label>Email <span class="tab"></span></label> <input type="email" id="Email"><br><br>
+        <label for="Stream">Stream</label><br><br>
+       
+            <input type="radio" value="CSE"  name="Stream" id="Stream"/>CSE<br><br>
+            <input type="radio" value="IT"  name="Stream" id="Stream"/>IT<br><br>
+            <input type="radio" value="CIVIL"  name="Stream" id="Stream"/>CIVIL<br><br>
+            <input type="radio" value="ECE"  name="Stream" id="Stream" />ECE<br><br>
+            <input type="radio" value="EEE"   name="Stream" id="Stream"/>EEE<br><br>
+            <input type="radio" value="MECH"  name="Stream" id="Stream"/>MECH<br><br>
+       
+            <label for="Year">Year  <span class="tab"></span></label><input type="text" name="Year" id="Year" required><br><br>
+            <label for="Semester">Semester  <span class="tab"></span></label><input type="text" name="Semester" id="Semester" required><br><br>
+            
+            <label for="Section"> Section <span class="tab"></span></label><input type="text" name="Section" id="Section" required><br><br>
+            <br>
+            
+            <input  type="submit" name="submit" value="submit" onclick="radioValidation()"  ><br>
+            <script>
+                function radioValidation(){
+                var option=document.getElementsById('Gender');
+    
+    if (!(option[0].checked || option[1].checked ||  option[2].checked ||  option[3].checked)) {
+        alert("Please Select Your Gender");
+        
+    }
+    var option=document.getElementsById('Stream');
+    if (!(option[0].checked || option[1].checked ||  option[2].checked ||  option[3].checked || option[4].checked || option[5].checked )) {
+        alert("Please Select Your Stream");
+       
+    }}
+    
+    
+         </script>
+            
+
+           <br>
+           
+        </form>
+        
+        
+    </body>
+</html>

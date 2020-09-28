@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.box
+{
+display: flex;
+flex-direction: row;
+
+margin: 10px;
+padding: 50px;
+justify-content: space-around;
+
+}
+
+.cbox{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+
+}
+</style>
+<script>
+
+
+function func()
+{
+var date = new Date();
+
+var day = date.getDay();
+var hrs = date.getHours();
+var text = '';
+
+
+if(hrs <= 12)
+{
+    text = 'Hello Good Morning ' + date.getTime();
+}
+else if(hrs <= 3)
+{
+    text = "Hello Good Afternoon " + date.getTime();
+
+}
+else if(hrs <= 6)
+{
+    text = "Hello Good Evening" + date.getTime();
+
+}
+else{
+    text = "Hello Good Night " + date.getTime();
+}
+
+
+
+
+if(day == 1)
+{
+
+document.getElementById('i1').src = "/images/"+ parseInt(Math.random()*16) +".jpg";
+
+document.getElementById('p1').innerHTML = text;
+document.getElementById('i2').src = "/images/"+ parseInt(Math.random()*16) +".jpg";
+
+document.getElementById('p2').innerHTML = text;
+
+
+document.getElementById('i3').src = "/images/"+ parseInt(Math.random()*16) +".jpg";
+
+document.getElementById('p3').innerHTML = text;
+
+document.getElementById('i4').src = "/images/"+ parseInt(Math.random()*16) +".jpg";
+
+document.getElementById('p4').innerHTML = text;
+
+
+
+
+}
+}
+
+
+
+</script>
+</head>
+<body onload = "func()">
+
+<div class = "box">
+<img id = "i1" >
+<img id = "i2" >
+<img id = "i3" >
+<img id = "i4" >
+</div>
+<div class = "cbox">
+<p id = "p1"></p>
+<p id = "p2"></p>
+<p id = "p3"></p>
+<p id = "p4"></p>
+</div>
+
+</body>
+</html>
